@@ -11,3 +11,6 @@ var sum = function() {
 	return inner;
 };
 var s = sum(); 
+alert(s); // 0
+alert(s(1)); // 1 
+alert(s(1)(2)(3)); // 6 
