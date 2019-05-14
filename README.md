@@ -14,3 +14,16 @@ var s = sum();
 alert(s); // 0
 alert(s(1)); // 1 
 alert(s(1)(2)(3)); // 6 
+
+
+Didnt get it:
+-----------------------------------------------
+var bar = 1,
+    foo = {};
+
+foo: {
+    bar: 2;
+    baz: ++bar;
+};
+foo.baz + foo.bar + bar;
+
