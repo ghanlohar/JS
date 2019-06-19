@@ -1,0 +1,6 @@
+Order in which CSS apply
+==================================
+1. The important keyword
+2. Inline styles
+3. CSS rules always prioritize from left to right, then from top to bottom.
+4. 
