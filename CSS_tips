@@ -6,3 +6,42 @@ Order in which CSS apply
 4. Classes, attributes and pseudo-classes - This category includes .classes, [attributes] and pseudo-classes such as :hover, :focus etc.
 5. Elements and pseudo-elements - This category includes element names and pseudo-elements, such as h1, div, :before and :after.
 6. CSS rules always prioritize from left to right, then from top to bottom.
+
+Box model
+============================
+C - content
+P - padding
+B - border
+M - margin
+
+Media Query syntax:
+=================================================
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+
+Backgroung-size property
+======================================================
+contain
+cover 
+100% 100%
+
+Picture tag
+======================================================
+<picture>
+  <source srcset="img_smallflower.jpg" media="(max-width: 400px)">
+  <source srcset="img_flowers.jpg">
+  <img src="img_flowers.jpg" alt="Flowers">
+</picture>
