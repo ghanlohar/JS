@@ -1,6 +1,8 @@
 Order in which CSS apply
 ==================================
 1. The important keyword
-2. Inline styles
-3. CSS rules always prioritize from left to right, then from top to bottom.
-4. 
+2. Inline styles Example: <h1 style="color: #ffffff;">.
+3. IDs - such as #navbar.
+4. Classes, attributes and pseudo-classes - This category includes .classes, [attributes] and pseudo-classes such as :hover, :focus etc.
+5. Elements and pseudo-elements - This category includes element names and pseudo-elements, such as h1, div, :before and :after.
+6. CSS rules always prioritize from left to right, then from top to bottom.
