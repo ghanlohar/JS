@@ -27,3 +27,12 @@ foo: {
 };
 foo.baz + foo.bar + bar;
 
+1.) “this” inside of an event handler always refers to the element it was triggered on.
+2.) 
+
+Constructor
+==============================
+The constructor property returns a reference to the constructor function(not the name string) that created the instance object.(MDN)
+1. if parent has static methods ---> dont change the constructor prpperty to child function
+2. if child has its own create method to create obj ---> change the constructor prpperty to child function
+
