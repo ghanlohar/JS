@@ -35,4 +35,5 @@ Constructor
 The constructor property returns a reference to the constructor function(not the name string) that created the instance object.(MDN)
 1. if parent has static methods ---> dont change the constructor prpperty to child function
 2. if child has its own create method to create obj ---> change the constructor prpperty to child function
+Summary: manually updating or setting the constructor can lead to differrent and sometimes confusing consequences. To prevent this just define the role of constructor in each specific case. In most cases constructor is not used and reassignment of it is not necessary.
 
