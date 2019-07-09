@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Event Capturing</title>
+</head>
+<body>
+	<button id="mybtn">Click me!</button>
+  <div id="holder">
+    Nothing 
+  </div>
+  
+  <script>
+    var div = document.querySelector('#holder');
+    var btn = document.querySelector('#mybtn');
+	
+	const setText = txt => div.textContent = txt;
+
+	const checkAuth = () => {
+	  // In reality, you of course don't have a timer but will probably reach out to a server
+	  return new Promise( (resolve, reject) => {
+		  setText("Checking user...");
+		  setTimeout(() => {
+			resolve({ isAuth: true })
+		  }, 2000)
+	  });
+	}
+	const getUser = (authInfo) => {
+		return new Promise( (resolve, reject) => {
+			setText("Fetching user.....");
+			  if (!authInfo.isAuth) {
+				cb(null)
+				return
+			  }
+			  setTimeout(() => {
+				cb({ name: 'Max' })
+			  }, 2000)
+		});
+	}
+	
+	
+	btn.addEventListener('click', function(){
+		checkAuth(authInfo => {
+		  getUser(authInfo, user => {
+			setText(user.name);
+		  })
+		})
+		console.log("Btn clicked");
+    });
+  </script>
+</body>
+</html>
