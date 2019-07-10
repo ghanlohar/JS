@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Observables</title>
+</head>
+<body>
+	<button id="mybtn">Click me!</button>
+	<hr/>
+	<div id="holder">Nothing</div>
+	<script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.4.0/Rx.js"></script>
+	<script>
+		var div = document.querySelector('#holder');
+		var btn = document.querySelector('#mybtn');
+		var num = 0;
+		const observable = Rx.Observable.fromEvent(btn, 'click');
+		observable.subscribe(event => {
+			console.log(event.target);
+			div.textContent = 'Btn Clicked '+ num++ +' times';
+		});
+	</script>
+</body>
+</html>
