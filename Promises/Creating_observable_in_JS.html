@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Event Capturing</title>
+  </head>
+  <body>
+		<button id="mybtn">Click me!</button>
+		<hr/>
+    <div id="holder">
+      Nothing
+    </div>
+
+    <script>
+			var div = document.querySelector('#holder');
+    	var btn = document.querySelector('#mybtn');
+			var counter = 0;
+
+      class Observable {
+        constructor(functionThatThrowsValues) {
+          this._functionThatThrowsValues = functionThatThrowsValues;
+        }
+        subscribe(observer) {
+          return this._functionThatThrowsValues(observer);
+        }
+      }
+      let fakeAsyncData$ = new Observable(observer => {
+        btn.addEventListener("click", () => {
+					observer.next("New data is coming " + counter++);
+				});
+				/*setInterval(() => {
+          observer.next("New data is coming");
+        }, 2000);*/
+      });
+
+      fakeAsyncData$.subscribe({
+        next(val) {
+          div.textContent = val;
+        },
+        error(e) {
+          console.log(e);
+        },
+        complete() {
+          console.log("complete");
+        }
+      });
+    </script>
+  </body>
+</html>
