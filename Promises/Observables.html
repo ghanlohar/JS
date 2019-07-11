@@ -9,6 +9,19 @@
 	<button id="mybtn">Click me!</button>
 	<hr/>
 	<div id="holder">Nothing</div>
+	
+<br/>
+<br/>
+	<button id="mybtn1">Nested observables!</button>
+	<hr/>
+	<div id="holder1">I am blank</div>
+	
+<br/>
+<br/>
+	<button id="mybtn2">Nested observables simplified!</button>
+	<hr/>
+	<div id="holder2">I am blank too</div>
+	
 	<script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.4.0/Rx.js"></script>
 	<script>
 		var div = document.querySelector('#holder');
@@ -19,6 +32,26 @@
 			console.log(event.target);
 			div.textContent = 'Btn Clicked '+ num++ +' times';
 		});
+		
+		
+		var div1 = document.querySelector('#holder1');
+		var btn1 = document.querySelector('#mybtn1');
+		var num1 = 0;
+		const observable1 = Rx.Observable.fromEvent(btn1, 'click');
+		observable1.subscribe(event => {
+			var timer = Rx.Observable.timer(1000);
+			timer.subscribe(data => {
+				div1.textContent = data + ' Btn Clicked '+ num1++ +' times';
+			});
+		});
+		
+		var div2 = document.querySelector('#holder2');
+		var btn2 = document.querySelector('#mybtn2');
+		var num2 = 0;
+		const observable2 = Rx.Observable.fromEvent(btn2, 'click')
+		observable2
+		  .switchMap(event => Rx.Observable.timer(1000)) // <- use the data of the first observable in the second one (if you want) and return the new observable
+		  .subscribe(data => div2.textContent = data + ' Btn Clicked '+ num2++ +' times')
 	</script>
 </body>
 </html>
