@@ -66,3 +66,10 @@ Note: Anything you await is passed through Promise.resolve(), so you can safely 
 Observables
 ================================
 
+Change Detection
+=================================
+victor savkin 
+
+
+
+
