@@ -30,6 +30,10 @@ foo.baz + foo.bar + bar;
 1.) “this” inside of an event handler always refers to the element it was triggered on.
 2.) 
 
+Lexical Scoping:
+================================
+An important feature of JavaScript to note, is that the interpreter uses Lexical Scoping, as opposed to Dynamic Scoping. This is just a complicated way of saying all inner functions, are statically (lexically) bound to the parent context in which the inner function was physically defined in the program code.
+
 Constructor
 ==============================
 The constructor property returns a reference to the constructor function(not the name string) that created the instance object.(MDN)
@@ -69,7 +73,6 @@ Observables
 Change Detection
 =================================
 victor savkin 
-
 
 
 
