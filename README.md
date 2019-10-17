@@ -74,6 +74,12 @@ Change Detection
 =================================
 victor savkin 
 
-p:nth-of-type(2){background:#0f0;} ---> 
-p:nth-child(2){background:#f00;} ---> 
 
+1. p:nth-of-type(2){background:green;} ---> Second paragraph below will be red, 3rd will be green
+2. p:nth-child(2){background:red;} ---> If p is the second child of any parent element.
+<div>
+   <div>first child</div>
+   <p>second child and first element of class "p"</p> <!-- GREEN -->
+   <p>third child and second element of class "p"</p>
+   <p>fourth child and third element of class "p"</p>
+</div>
