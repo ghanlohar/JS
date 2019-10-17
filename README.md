@@ -74,5 +74,6 @@ Change Detection
 =================================
 victor savkin 
 
-
+p:nth-of-type(2){background:#0f0;} ---> 
+p:nth-child(2){background:#f00;} ---> 
 
