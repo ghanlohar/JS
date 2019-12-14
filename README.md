@@ -33,6 +33,7 @@ foo.baz + foo.bar + bar;
 Closures:
 ======================================
 An inner function always has access to the vars and parameters of its outer function, even after the outer function has returned.
+
 Common uses:
 --------------------
 1. Encapsulations: module pattern/ revealing module pattern
@@ -46,7 +47,7 @@ Although closures are powerful, they should be used sparingly due to some perfor
 
 2. Garbage collection: The garbage collector will try to free the memory of objects when they can not be referenced by any other live object running in the program, or are unreachable.
 
-3.Circular references: In IE, the JavaScript (JScript ?) engine and DOM both have their own individual garbage collector. So when referencing a DOM element from JavaScript, the native collector hands off to the DOM and the DOM collector points back to native, resulting in neither collector knowing about the circular reference.
+3. Circular references: In IE, the JavaScript (JScript ?) engine and DOM both have their own individual garbage collector. So when referencing a DOM element from JavaScript, the native collector hands off to the DOM and the DOM collector points back to native, resulting in neither collector knowing about the circular reference.
 
 Lexical Scoping:
 ================================
