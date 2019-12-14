@@ -30,6 +30,24 @@ foo.baz + foo.bar + bar;
 1.) “this” inside of an event handler always refers to the element it was triggered on.
 2.) 
 
+Closures:
+======================================
+An inner function always has access to the vars and parameters of its outer function, even after the outer function has returned.
+Common uses:
+--------------------
+1. Encapsulations: module pattern/ revealing module pattern
+2. Callbacks: most powerful use
+3. Closures as arguments: Minimum sort function. By passing closures as parameters, we could define the implementation for different types of data sorting, while still reusing a single function body as a schematic.
+
+When not to use Closures ?
+--------------------
+Although closures are powerful, they should be used sparingly due to some performance concerns:
+1. Large scope lengths: Multiple nested functions are a typical sign that you might run into some performance issues. because each time a identifier needs to be resolved VO is traversed and examined.
+
+2. Garbage collection: The garbage collector will try to free the memory of objects when they can not be referenced by any other live object running in the program, or are unreachable.
+
+3.Circular references: In IE, the JavaScript (JScript ?) engine and DOM both have their own individual garbage collector. So when referencing a DOM element from JavaScript, the native collector hands off to the DOM and the DOM collector points back to native, resulting in neither collector knowing about the circular reference.
+
 Lexical Scoping:
 ================================
 An important feature of JavaScript to note, is that the interpreter uses Lexical Scoping, as opposed to Dynamic Scoping. This is just a complicated way of saying all inner functions, are statically (lexically) bound to the parent context in which the inner function was physically defined in the program code.
