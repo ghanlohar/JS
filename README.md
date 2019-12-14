@@ -33,6 +33,7 @@ foo.baz + foo.bar + bar;
 Closures:
 ======================================
 An inner function always has access to the vars and parameters of its outer function, even after the outer function has returned.
+http://davidshariff.com/blog/javascript-scope-chain-and-closures/
 
 Common uses:
 --------------------
