@@ -54,6 +54,39 @@ Lexical Scoping:
 ================================
 An important feature of JavaScript to note, is that the interpreter uses Lexical Scoping, as opposed to Dynamic Scoping. This is just a complicated way of saying all inner functions, are statically (lexically) bound to the parent context in which the inner function was physically defined in the program code.
 
+Inheritence:
+=============================
+
+1. Pseudoclassical pattern
+-------------------------------
+A pattern which uses a constructor function and the new operator, combined with a prototype added to the constructor is said to be Pseudoclassical.
+	a. Invoke a constructor function.
+	b. Point a child’s prototype to the parent’s prototype for inheritance to occur.
+	
+Steps:
+1. Create a Parent(car) class (function)
+2. Add some properties to Parent (car) prototype to let the child classes access
+3. Create two new child classes
+4. Helper function to perform inheritence: Point a child's prototype to a parent's prototype with the help of intermediate object.
+5. Inherite with parents
+6. Create new instances of child classes
+	
+2. Functional pattern
+---------------------------
+you create an object as your parent, pass the child object to the parent to inherit / apply its properties, and return the resulting object back to the child, who can then augment its own properties to the object returned from the parent.
+	pros: As the closures of each function allow for good use of public and private methods / attributes.
+	cons: downside for performance because each object is unique
+	
+Steps:
+1. Create a parent function.
+2. Create the child function and call parent which will return a object with inherited props.
+3. Child, who can then augment its own properties to the object returned from the parent.
+4. Create objects by calling child functions.
+	
+3. Prototypal pattern
+----------------------------
+var child = Object.create(Parent);
+
 Constructor
 ==============================
 The constructor property returns a reference to the constructor function(not the name string) that created the instance object.(MDN)
