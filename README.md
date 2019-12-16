@@ -57,7 +57,7 @@ An important feature of JavaScript to note, is that the interpreter uses Lexical
 Inheritence:
 =============================
 
-1. Pseudoclassical pattern
+Pseudoclassical pattern
 -------------------------------
 A pattern which uses a constructor function and the new operator, combined with a prototype added to the constructor is said to be Pseudoclassical.
 	a. Invoke a constructor function.
@@ -71,7 +71,7 @@ Steps:
 5. Inherite with parents
 6. Create new instances of child classes
 	
-2. Functional pattern
+Functional pattern
 ---------------------------
 you create an object as your parent, pass the child object to the parent to inherit / apply its properties, and return the resulting object back to the child, who can then augment its own properties to the object returned from the parent.
 	pros: As the closures of each function allow for good use of public and private methods / attributes.
@@ -83,7 +83,7 @@ Steps:
 3. Child, who can then augment its own properties to the object returned from the parent.
 4. Create objects by calling child functions.
 	
-3. Prototypal pattern
+Prototypal pattern
 ----------------------------
 var child = Object.create(Parent);
 
