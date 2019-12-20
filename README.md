@@ -136,3 +136,50 @@ victor savkin
    <p>third child and second element of class "p"</p>
    <p>fourth child and third element of class "p"</p>
 </div>
+
+Array methods:
+---------------------------
+map(function(item, index, array){})
+
+reduce(function(accumulator, item, index, array){}, initialVal);
+Use case:
+Tally items in array:
+const fruit = [
+  'apple', 'banana', 'cherry', 'mango', 'mango', 'banana', 'cherry', 'apricot', 'apple', 'apple', 'guava', 'banana', 'guava'
+]
+const fruitTally2 = fruit.reduce((currentTally, currentFruit) => {
+  currentTally[currentFruit] = (currentTally[currentFruit] || 0) + 1 
+  return currentTally
+} , {})
+
+// returns {"apple":3,"banana":3,"cherry":2,"mango":2,"apricot":1,"guava":2}
+
+filter(function(item, index, array){})
+
+slice(startIndex, endIndex) ---> Used to kind of select elem from array, Original array is not modified.
+splice(startIndex, length, itemsToAdd) ---> Used to remove and replace items(third arg) from an array.
+ 
+CSS:
+========================
+Ways to add CSS to HTML element.
+--------------------------
+1. The most straightforward path. 
+Query the element from DOM 
+change it's inline styles.
+
+document.getElementById('resultStats').style.fontFamily= 'Arial';
+
+2. Create <style> tag, fill it with CSS rules and append the tag to the DOM.
+var style = document.createElement('style');
+  style.innerHTML = `
+  #target {
+  color: blueviolet;
+  }
+  `;
+  document.head.appendChild(style);
+ 
+3. CSSOM insertRule
+Tag is empty, but the style (darkseagreen color) is applied to the element. Also the color can't be changed via devtools because Chrome doesn't allow editing dynamic CSS styles.
+style.sheet.insertRule('#target {color: darkseagreen}');
+
+CSS selectors are generally case-insensitive; this includes class and ID selectors. unless page has XML/XHTML declaration.
