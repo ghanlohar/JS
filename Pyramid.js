@@ -1,19 +1,16 @@
-function createPyramid(rows)
+var createPyramid = function(rows) 
 {
-
-for(var i=0;i<rows;i++) {
-var output="";
-var charCode = 97;
-    for(var j=0;j<rows-i;j++) {
-        output+=" ";
+    for(var i = 0; i< rows; i++){
+        var o = '';
+        var charCode = '97';
+        for(var j = 0; j< rows - i; j++){
+            o += ' ';
+        }
+        for(var k = 0; k <= i; k++){
+            o += String.fromCharCode(charCode) + ' ';
+            charCode++;
+        }
+        console.log(o)
     }
-    for(var k=0;k<=i;k++) {    
-       //output += "* ";
-       
-       output += String.fromCharCode(charCode ) +  ' ';
-         charCode++;
-    }
-    console.log(output);  
-}  
 }
-createPyramid('5') 
+createPyramid(5);
