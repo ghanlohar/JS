@@ -1,0 +1,105 @@
+HTML5
+==================================================================================================
+Search engine comes to page it has a very good idea what page contains.
+
+Storage & file:
+1. File api:
+2. File Reader
+3. Indexed DB: document DB api implemented entirely in the browsers, if you have large set of data u need to store and query on the client.
+4. Local Storage: basic storage
+
+Performance optimization & analysis:
+1. high resolution time - measure performance of your page 
+2. Navigation timing - how the user navigated to your page, handle custom event to page load lifecycles 
+3. page visibility API - want your page to behave differently when its not active tab in the browser
+4. user timing: 
+5. webworkers : separate thread to improove performance
+
+Security & privacy policy:
+most basic atack on website is XSS:
+1. Content security policy: allow us to create a white list of sources of page including scripts and files.
+2. Referer policy : tighter control on the amt of https data a referer can transfer.
+3. Web cryptography: encrypt and decrypt data entirely on the client..
+
+doctype -- casing is importnat
+main -- only one element in html page
+article -- more than one
+h1 -- more than one in html5
+nav -- navigation links within the page
+section -- logical group between elements
+a --- now block level elements as well along with line level element inside a 
+
+https://html5boilerplate.com/ --- 
+https://caniuse.com/ ---
+
+fallbacks & polyfills
+
+Modernizr.js: Modernizr uses feature detection to allow you to easily tailor your user's experiences based on the actual capabilities of their browser.
+
+Fallback: similar functionality of a native feature but may be just with a different API.
+Polyfills => exact same functionality as the native, idea is once the browsers implements this native functionality you can just remove polyfills and it will work as expected.
+
+https://html5please.com/
+
+
+Selection API:
+=====================================================
+document.querySelector(selector);  ---> selector  = css3 selector
+
+querySelector    ==> single elements
+querySelectorAll ==> array of nodelist static result
+getElementByClassName ==> live result 
+
+
+Drag & Drop:
+=====================================================
+DragSource: 
+DropTarget: cancel default behavior on drop target
+
+Source ==> dragStart: set id as text data on event.dataTransfer using setData();
+target ==> dragOver: prevent default action using preventDefault();
+target ==> drop: extract id from the event.dataTransfer using getData(), append the child to event.target using appendChild();
+
+
+Web Workers
+=====================================================
+Separate thread for performing heavy computaion work
+
+A worker is an object created using a constructor (e.g. Worker()) that runs a named JavaScript file — this file contains the code that will run in the worker thread; 
+workers run in another global context that is different from the current window. 
+
+postMessage() -- both side(main and worker) uses to send data to each other 
+onmessage --- both side(main and worker) implements handler to responds to messages shared 
+event.data --- data contained in this field, data is copied rather then shared
+
+Contexts:
+-------------
+DedicatedWorkerGlobalScope object (in the case of dedicated workers - workers that are utilized by a single script).
+SharedWorkerGlobalScope (in the case of shared workers - workers that are shared between multiple scripts).
+
+WebWorkers can do:
+Workers may in turn spawn new workers, as long as those workers are hosted within the same origin as the parent page. 
+In addition, workers may use XMLHttpRequest for network I/O, with the exception that the responseXML and channel attributes on XMLHttpRequest always return null.
+
+We can run whatver code(websockets, storage) we want to but with exception like:
+1. No direct DOM operations.
+2. Cant use some default properties and method of window object
+
+Types:
+---------
+Shared workers
+Service Workers
+Chrome Workers
+Audio Workers
+
+The WebSocket API:
+=================================================================
+
+The WebSocket API is an advanced technology that makes it possible to open a two-way interactive communication session between the user's browser and a server. With this API, you can send messages to a server and receive event-driven responses without having to poll the server for a reply.
+
+
+
+
+
+
+ 
