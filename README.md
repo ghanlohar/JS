@@ -183,3 +183,10 @@ Tag is empty, but the style (darkseagreen color) is applied to the element. Also
 style.sheet.insertRule('#target {color: darkseagreen}');
 
 CSS selectors are generally case-insensitive; this includes class and ID selectors. unless page has XML/XHTML declaration.
+
+for...in vs for...of:
+========================================
+for...in ====>> iterates over the enumerble string key props of obj including inherited, excluding symblized key 
+
+The for...of ===>> statement creates a loop iterating over iterable objects, including: built-in String, Array, array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables.
+
