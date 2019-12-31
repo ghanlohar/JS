@@ -101,13 +101,17 @@ Geolocation:
 =========================================================
 window.navigator ===>> The Navigator interface represents the state and the identity of the user agent.
 navigator.geolocation ===>> Returns a Geolocation object allowing accessing the location of the device.
+location.coords.latitude
+location.coords.longitude
 
 session storage: 
 local storage:
 
 Audio/Video API:
 ===========================================
-<source src='' type=''/>  ==> type is MIME type 
+<audio>
+	<source src='' type=''/>  ==> type is MIME type 
+</audio>
 
 audioTag.play(), audioTag.pause(), audioTag.duration, audioTag.currentTime -- time elapsed
 audioTag.muted ==> on window.onload we can set this to true to mute audio initially when we start palying it.
