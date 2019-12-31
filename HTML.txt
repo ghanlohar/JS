@@ -97,7 +97,30 @@ The WebSocket API:
 
 The WebSocket API is an advanced technology that makes it possible to open a two-way interactive communication session between the user's browser and a server. With this API, you can send messages to a server and receive event-driven responses without having to poll the server for a reply.
 
+Geolocation:
+=========================================================
+window.navigator ===>> The Navigator interface represents the state and the identity of the user agent.
+navigator.geolocation ===>> Returns a Geolocation object allowing accessing the location of the device.
 
+session storage: 
+local storage:
+
+Audio/Video API:
+===========================================
+<source src='' type=''/>  ==> type is MIME type 
+
+audioTag.play(), audioTag.pause(), audioTag.duration, audioTag.currentTime -- time elapsed
+audioTag.muted ==> on window.onload we can set this to true to mute audio initially when we start palying it.
+
+audioTag.addEventListener('click', callback, capture) ===>> handle error event to handle errors
+audioTag.addEventListener('ended', callback, capture) ===>> handle end of media
+
+Attribute:
+preload: preload entire audio/video before it was played.
+loop: loop through the audio/video
+
+Dynamically changing attributes:
+audioTag.src = new src  ===>  we can change src
 
 
 
