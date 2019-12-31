@@ -1,0 +1,40 @@
+Int:
+==================================================
+:root selector in html===> always selects HTML tag in case of html page. others root element
+
+var a = '1234567'; console.log([...a]) ===>>>>  ["1", "2", "3", "4", "5", "6", "7"];
+
+for in , for of ==> for in objects
+
+translate(x, y) ==>  move elements in a two-dimensional space.
+
+Em font ===> is a scalable unit equal to the current font size in the document.
+If you haven't set font size by default, then the browser will set it for you. Browser default font size would typically be 16px.
+So 1em equals 16px by default.
+
+html5 tag in old browser ===> htmlshim.js
+pollyfills ==> 
+CSS - specificity => id, class & attributes, elements,
+babel: preset/env vs react ===>
+withStyles ==> material UI. 
+
+MDN
+1. Type selectors (e.g., h1) and pseudo-elements (e.g., ::before).
+2. Class selectors (e.g., .example), attributes selectors (e.g., [type="radio"]) and pseudo-classes (e.g., :hover).
+3. ID selectors (e.g., #example).
+
+If async is present: The script is executed asynchronously with the rest of the page (the script will be executed while the page continues the parsing)
+If async is not present and defer is present: The script is executed when the page has finished parsing
+If neither async or defer is present: The script is fetched and executed immediately, before the browser continues parsing the page
+
+Own MAP function: 
+function MyMap(fn){
+    let array = [...this];
+    for(let i = 0; i < array.length; i++)
+    {
+        let item = array[i];
+        array[i] = fn(item, i, this);
+    }
+    return array;
+}
+Array.prototype.MyMap = MyMap;
