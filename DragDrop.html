@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+ function A(e){
+	e.preventDefault();
+ }
+ function B(e)
+ {
+	e.preventDefault();
+	var id = e.dataTransfer.getData('text');
+	var draged = document.getElementById(id);
+	e.target.appendChild(draged);
+ }
+ function C(e)
+ {
+	e.dataTransfer.setData('text', e.target.id);
+ }
+</script>
+</head>
+<body>
+
+<p>Drag the W3Schools image into the rectangle:</p>
+
+<div id="div1" ondragover= "A(event)" ondrop="B(event)"></div>
+<br>
+<img id="drag1" src="img_logo.gif" draggable="true" ondragstart="C(event)">
+
+</body>
+</html>
