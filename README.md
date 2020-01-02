@@ -50,6 +50,14 @@ Although closures are powerful, they should be used sparingly due to some perfor
 
 3. Circular references: In IE, the JavaScript (JScript ?) engine and DOM both have their own individual garbage collector. So when referencing a DOM element from JavaScript, the native collector hands off to the DOM and the DOM collector points back to native, resulting in neither collector knowing about the circular reference.
 
+Context vs. Scope
+===========================
+1. Every function invocation has both
+2. Scope is function-based while context is object-based
+3. Scope pertains to the variable access of a function when it is invoked and is unique to each invocation.
+4. Context is always the value of the this keyword which is a reference to the object that “owns” the currently executing code.
+5. When called as an unbound function, context(this) will default to the global context or window object in the browser. However, if the function is executed in strict mode, the context will default to undefined.
+
 Lexical Scoping:
 ================================
 An important feature of JavaScript to note, is that the interpreter uses Lexical Scoping, as opposed to Dynamic Scoping. This is just a complicated way of saying all inner functions, are statically (lexically) bound to the parent context in which the inner function was physically defined in the program code.
@@ -189,4 +197,43 @@ for...in vs for...of:
 for...in ====>> iterates over the enumerble string key props of obj including inherited, excluding symblized key 
 
 The for...of ===>> statement creates a loop iterating over iterable objects, including: built-in String, Array, array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables.
+
+Events Bubbling https://javascript.info/bubbling-and-capturing:
+==========================
+default -- Bubbling, can enable capturing using third argument in addEventListener();
+Almost all events bubble. -- focus does not bubble.
+
+event.stopImmediatePropagation()
+--------------------------
+To stop the bubbling and prevent other handlers on the current element from running, there’s a method event.stopImmediatePropagation(). After it no other handlers execute.
+
+event.stopPropagation()
+-------------------------
+To stop the bubbling 
+
+remove handler:
+--------------------------
+To remove the handler, removeEventListener needs the same phase 
+If we addEventListener(..., true), then we should mention the same phase in removeEventListener(..., true)
+
+Note: Listeners on same element and same phase run in their set order
+
+Each handler can access event object properties:
+----------------------------------------
+1. event.target – the deepest element that originated the event.
+2. event.currentTarget (=this) – the current element that handles the event (the one that has the handler on it)
+3. event.eventPhase – the current phase (capturing=1, target=2, bubbling=3).
+
+Cookies:
+=======================
+Cookies let you store user information in web pages ==> document.cookie
+1. name-value pairs, key-value, expires --> expiry and path --> to which cookie belongs
+2. small text files
+3. remember information about the user
+
+
+
+
+
+
 
