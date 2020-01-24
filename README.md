@@ -46,9 +46,13 @@ When not to use Closures ?
 Although closures are powerful, they should be used sparingly due to some performance concerns:
 1. Large scope lengths: Multiple nested functions are a typical sign that you might run into some performance issues. because each time a identifier needs to be resolved VO is traversed and examined.
 
-2. Garbage collection: The garbage collector will try to free the memory of objects when they can not be referenced by any other live object running in the program, or are unreachable.
+Garbage collection
+----------------------
+The garbage collector will try to free the memory of objects when they can not be referenced by any other live object running in the program, or are unreachable.
 
-3. Circular references: In IE, the JavaScript (JScript ?) engine and DOM both have their own individual garbage collector. So when referencing a DOM element from JavaScript, the native collector hands off to the DOM and the DOM collector points back to native, resulting in neither collector knowing about the circular reference.
+Circular references
+-----------------------
+In IE, the JavaScript (JScript ?) engine and DOM both have their own individual garbage collector. So when referencing a DOM element from JavaScript, the native collector hands off to the DOM and the DOM collector points back to native, resulting in neither collector knowing about the circular reference.
 
 Context vs. Scope
 ===========================
