@@ -134,6 +134,12 @@ Note: Anything you await is passed through Promise.resolve(), so you can safely 
 
 Observables
 ================================
+Subject:  https://rxjs-dev.firebaseapp.com/guide/subject
+1. Multicasted.
+2. Can be used like Observable/Observer both.
+3. With the help of these we can make observables multicasted.
+
+Observable.subscribe(observer);
 
 Change Detection
 =================================
