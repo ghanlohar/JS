@@ -16,20 +16,30 @@ html5 tag in old browser ===> htmlshim.js
 pollyfills ==> 
 CSS - specificity => id, class & attributes, elements,
 babel: preset/env vs react ===>
+
+babel preset env: for compiling Javascript ES6 code down to ES5 (please note that babel-preset-es2015 is now deprecated)
+babel preset react: for compiling JSX and other stuff down to Javascript
+
+~: if you write ~0.13.0, you want to only update patch releases: 0.13.1 is ok, but 0.14.0 is not.
+^: if you write ^0.13.0, you want to update patch and minor releases: 0.13.1, 0.14.0 and so on.
+*: if you write *, that means you accept all updates, including major version upgrades.
+
 withStyles ==> material UI. 
 
 MDN
-1. Type selectors (e.g., h1) and pseudo-elements (e.g., ::before).
+1. Type selectors(elemetns) (e.g., h1) and pseudo-elements (e.g., ::before).
 2. Class selectors (e.g., .example), attributes selectors (e.g., [type="radio"]) and pseudo-classes (e.g., :hover).
 3. ID selectors (e.g., #example).
 
+Script tag:
 If async is present: The script is executed asynchronously with the rest of the page (the script will be executed while the page continues the parsing)
 If async is not present and defer is present: The script is executed when the page has finished parsing
 If neither async or defer is present: The script is fetched and executed immediately, before the browser continues parsing the page
 
 Own MAP function: 
-function MyMap(fn){
+function MyMap(fn, context){
     let array = [...this];
+    fn = context && fn.bind(context) || fn;
     for(let i = 0; i < array.length; i++)
     {
         let item = array[i];
@@ -38,3 +48,64 @@ function MyMap(fn){
     return array;
 }
 Array.prototype.MyMap = MyMap;
+
+Xoriant:
+---------------------------------
+1. 	Currying function 
+2. 	Find element from sorted Array --- (number-1)th element, devide/2 approach
+3. 	Where will we write fetch data in redux : action/reducer, ans: action
+4. 	10/3 - find quotient using own logic --> iterate till 3 time and stop and return the iteration where 10-3x < 3.
+5. 	Reverse an array.
+6. 	Find duplicate in the array.
+7.  Repeat array in JS.
+8. 	forward Ref -- two way data binding bet parent and child components.
+9.  Debouncing and throtalling.
+10. Memory leaks - resolutions
+11. 
+12.  
+
+Mphasis:
+------------------------------------
+Inheritance.
+Chaining in CSS
+map and pipe difference.
+switch case/ if-else optimizations some object literal notation.
+Axios vs fetch.
+Error bundaries.
+Lazy loading
+Environmets configuration - prod, local.
+unit testing profile components, delete profile method.
+less - mixins.
+promise and observable difference.
+can we use Rxjs and Typescript with the ReactJS
+Jest/ karma questions.
+How will we send JWt /aut token with every request. -- axios/interceptor
+
+Change the link content using CSS.
+Child component which is receiving props from parent in the successful callback from API request, is rendering multiple times. how can we resolve this.
+Remove duplicates from array containng duplicate objects having fields.
+
+
+HCL
+---------------------------------------------
+Console.log([]+[]) --- ''
+Console.log( false +[]) --- 'false'
+Console.log(![]+[]) --- 'false'
+Console.log(+false) --- 0
+
+We can not set this.property inside object props
+delete arr[n] -- does not alter length of arr
+ways to empty array.
+ways get sum of even elemetns in ARRAY without using array.
+get character at perticular index in string-- charAt();
+div to circle using CSS -- height, width - same, border-radius: 50%;
+
+
+
+
+
+
+
+
+
+
