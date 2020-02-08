@@ -157,7 +157,8 @@ victor savkin
 
 Array methods:
 ---------------------------
-1. map(function(item, index, array){})
+1. map(function(item, index, array){}, thisArg)
+ 
 
 2. reduce(function(accumulator, item, index, array){}, initialVal);
 Use case:
@@ -172,14 +173,14 @@ const fruitTally2 = fruit.reduce((currentTally, currentFruit) => {
 
 // returns {"apple":3,"banana":3,"cherry":2,"mango":2,"apricot":1,"guava":2}
 
-3. filter(function(item, index, array){})
+3. filter(function(item, index, array){}, thisArg)
 
 4. slice(startIndex, endIndex) ---> Used to kind of select elem from array, Original array is not modified.
 5. splice(startIndex, length, itemsToAdd) ---> Used to remove and replace items(third arg) from an array.
  
 CSS:
 ========================
-Ways to add CSS to HTML element.
+Ways to add CSS to HTML element using JS.
 --------------------------
 1. The most straightforward path. 
 Query the element from DOM 
