@@ -157,9 +157,9 @@ victor savkin
 
 Array methods:
 ---------------------------
-map(function(item, index, array){})
+1. map(function(item, index, array){})
 
-reduce(function(accumulator, item, index, array){}, initialVal);
+2. reduce(function(accumulator, item, index, array){}, initialVal);
 Use case:
 Tally items in array:
 const fruit = [
@@ -172,10 +172,10 @@ const fruitTally2 = fruit.reduce((currentTally, currentFruit) => {
 
 // returns {"apple":3,"banana":3,"cherry":2,"mango":2,"apricot":1,"guava":2}
 
-filter(function(item, index, array){})
+3. filter(function(item, index, array){})
 
-slice(startIndex, endIndex) ---> Used to kind of select elem from array, Original array is not modified.
-splice(startIndex, length, itemsToAdd) ---> Used to remove and replace items(third arg) from an array.
+4. slice(startIndex, endIndex) ---> Used to kind of select elem from array, Original array is not modified.
+5. splice(startIndex, length, itemsToAdd) ---> Used to remove and replace items(third arg) from an array.
  
 CSS:
 ========================
