@@ -242,6 +242,12 @@ Cookies let you store user information in web pages ==> document.cookie
 2. small text files
 3. remember information about the user
 
+ES6:
+================================
+diff bet Arrow and Normal fn:
+1. No this binding
+2. No Argumanets object
+3. Not able to use new keyword
 
 
 
