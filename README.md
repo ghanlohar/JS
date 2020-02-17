@@ -85,7 +85,7 @@ Steps:
 	
 Functional pattern
 ---------------------------
-you create an object as your parent, pass the child object to the parent to inherit / apply its properties, and return the resulting object back to the child, who can then augment its own properties to the object returned from the parent.
+You create an function as your parent, pass the child object to the parent to inherit / apply its properties, and return the resulting object back to the child, who can then augment its own properties to the object returned from the parent.
 	pros: As the closures of each function allow for good use of public and private methods / attributes.
 	cons: downside for performance because each object is unique
 	
