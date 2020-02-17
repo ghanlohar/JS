@@ -3,7 +3,7 @@
 1. Create a Parent(car) class (function)
 2. Add some properties to Parent (car) prototype to let the child classes access
 3. Create two new child classes
-4. Helper function to perform inheritence: Point a child's prototype to a parent's prototype with the help of intermediate object.
+4. Helper function to perform inheritence: Point a child's prototype to a parent's prototype with the help of intermediate function.
 5. Inherite with parents
 6. Create new instances of child classes
 *
