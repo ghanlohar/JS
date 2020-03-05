@@ -99,8 +99,17 @@ ways to empty array.
 ways get sum of even elemetns in ARRAY without using array.
 get character at perticular index in string-- charAt();
 div to circle using CSS -- height, width - same, border-radius: 50%;
+Can react component update their props ==> No, Anti pattern
+Encapsulation implementation example in React ==> setState()
 
+---------------------------------
 
+Which lifecycle method we can not use setState() in 
+Principals of redux architecture
+symbol js
+generators in JS
+Pure functions
+^=, $=, ~=, *=, 
 
 
 
