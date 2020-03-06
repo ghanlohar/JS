@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Event Capturing</title>
+</head>
+<body>
+  <div id="parent">
+    <button id="child">Child</button>
+  </div>
+  
+  <script>
+    var parent = document.querySelector('#parent');
+    var child = document.querySelector('#child');
+
+    parent.addEventListener('click', function(){
+      console.log("In Capture: Parent clicked");
+	  //event.stopPropagation();
+    }, true);
+
+	document.addEventListener('click', function(){
+      console.log("In Capture: document clicked");
+    }, true);
+	
+	window.addEventListener('click', function(){
+      console.log("In Capture: window clicked");
+    }, true);
+
+    child.addEventListener('click', function(){
+      console.log("In Capture: Child clicked");
+    });
+  </script>
+</body>
+</html>
