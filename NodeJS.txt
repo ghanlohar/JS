@@ -1,0 +1,63 @@
+NodeJs
+1.	Body-parser
+•	https://medium.com/@adamzerner/how-bodyparser-works-247897a93b90
+•	 https://stackoverflow.com/questions/29960764/what-does-extended-mean-in-express-4-0 
+2.	app.use vs app.all - https://stackoverflow.com/questions/14125997/difference-between-app-all-and-app-use?rq=1 
+3.	Passport authentication
+•	http://www.passportjs.org/docs/downloads/html/ 
+•	https://code.tutsplus.com/tutorials/authenticating-nodejs-applications-with-passport--cms-21619 
+•	https://scotch.io/tutorials/easy-node-authentication-facebook 
+4.	If you have your node.js behind a proxy and are using secure: true, you need to set "trust proxy" in express: app.set('trust proxy', 1);
+5.	Chat application - https://socket.io/get-started/chat/ 
+6.	Difference betwwen tilde (~) and ^ operator
+•	"express": "^4.0.0" will install latest version of express 4.*.*
+•	"express": "~4.0.0" will install latest version of express 4.0.*
+7.	Gulp? - https://scotch.io/tutorials/automate-your-tasks-easily-with-gulp-js 
+8.	Template Engines
+9.	https://github.com/Pankajmalhan/MeanStack2
+10.	https://scotch.io/bar-talk/setting-up-a-mean-stack-single-page-application
+11.	https://www.codeproject.com/Articles/1185294/Build-Modern-App-with-MEAN-Stack-Part
+12.	How to make sure all developers using same version of npm modules - .npmrc?
+•	Use npm config set save=true
+•	Use npm config set save-exact=true
+13.	https://javascriptplayground.com/blog/2013/06/think-async/
+14.	https://www.codementor.io/davidtang/unit-testing-and-tdd-in-node-js-part-1-8t714s877 
+15.	How to avoid callback hell problem?
+16.	Generators - https://medium.com/@dtothefp/why-can-t-anyone-write-a-simple-es6-generators-tutorial-ec2bbdf6ff45
+17.	Performance Optimization Techniques using node
+•	Use Cluster
+•	Use compression to compress request payload
+•	Use cache
+•	Remove unnecessary modules
+•	Use async apis
+•	Serve static content using nginx or cdn - https://www.sitepoint.com/configuring-nginx-ssl-node-js/
+•	Use gzip to compress request response data
+•	Remove unused middleware
+•	Use client side rendering
+•	Use indexing
+18.	Nodejs security
+•	Bcrypt
+•	Authentication using passport
+•	Use helemet - https://www.npmjs.com/package/helmet 
+•	Use csurf module to mitigate cross site user request forgery - https://www.npmjs.com/package/csurf
+19.	Morgan – http request logger middleware
+20.	Express-validator - https://booker.codes/input-validation-in-express-with-express-validator/ 
+21.	Cluster - https://medium.freecodecamp.org/scaling-node-js-applications-8492bd8afadc 
+22.	Child Process - https://medium.freecodecamp.org/node-js-child-processes-everything-you-need-to-know-e69498fe970a 
+23.	readFile vs createReadStream – readfile loaded all content into memory before writing.so in case of reading big file it will eat good amount of memory. While createreadstream gives content in chunk.
+24.	If a file extension was not specified, the first thing Node will try to resolve is a .js file. If it can’t find a .js file, it will try a .json file and it will parse the .json file if found as a JSON text file. After that, it will try to find a binary .node file. 
+25.	https://stackoverflow.com/questions/42616120/what-is-the-relationship-between-node-js-and-v8 
+26.	https://stackoverflow.com/questions/22213980/could-someone-explain-what-process-argv-means-in-node-js-please
+27.	https://medium.freecodecamp.org/how-to-use-ejs-templating-in-a-node-js-application-ea9347a96c65 
+28.	Micro service example - https://medium.com/@cramirez92/build-a-nodejs-cinema-microservice-and-deploying-it-with-docker-part-1-7e28e25bfa8b 
+29.	Video streaming - https://gist.github.com/paolorossi/1993068 
+30.	https://github.com/mcollina/make-promises-safe
+31.	https://medium.com/@samerbuna/you-dont-know-node-6515a658a1ed
+32.	https://medium.freecodecamp.org/node-js-streams-everything-you-need-to-know-c9141306be93
+33.	https://medium.freecodecamp.org/securing-node-js-restful-apis-with-json-web-tokens-9f811a92bb52
+34.	Event-Loop
+•	https://medium.com/the-node-js-collection/what-you-should-know-to-really-understand-the-node-js-event-loop-and-its-metrics-c4907b19da4c 
+•	https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/
+•	https://stackoverflow.com/questions/15349733/setimmediate-vs-nexttick 
+•	http://voidcanvas.com/setimmediate-vs-nexttick-vs-settimeout/  
+35.	Client side vs server side rendering?
