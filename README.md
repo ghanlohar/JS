@@ -27,9 +27,6 @@ foo: {
 };
 foo.baz + foo.bar + bar;
 
-1.) “this” inside of an event handler always refers to the element it was triggered on.
-2.) 
-
 Closures:
 ======================================
 An inner function always has access to the vars and parameters of its outer function, even after the outer function has returned.
