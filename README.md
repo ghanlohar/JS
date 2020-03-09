@@ -232,6 +232,12 @@ Each handler can access event object properties:
 2. event.currentTarget (=this) – the current element that handles the event (the one that has the handler on it)
 3. event.eventPhase – the current phase (capturing=1, target=2, bubbling=3).
 
+Event delegation
+---------------------------------
+Capturing and bubbling allow us to implement one of most powerful event handling patterns called event delegation.
+
+<br/>The idea is that if we have a lot of elements handled in a similar way, then instead of assigning a handler to each of them – we put a single handler on their common ancestor.
+
 Cookies:
 =======================
 Cookies let you store user information in web pages ==> document.cookie
