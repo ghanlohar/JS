@@ -21,7 +21,7 @@ most basic atack on website is XSS:
 2. Referer policy : tighter control on the amt of https data a referer can transfer.
 3. Web cryptography: encrypt and decrypt data entirely on the client..
 
-doctype -- casing is importnat
+doctype -- The <!DOCTYPE> declaration is NOT case sensitive.
 main -- only one element in html page
 article -- more than one
 h1 -- more than one in html5
