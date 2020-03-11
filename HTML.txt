@@ -127,6 +127,9 @@ Dynamically changing attributes:
 audioTag.src = new src  ===>  we can change src
 
 
-
+Accessibility:
+---------------------
+wave - 
+axe - 
 
  
