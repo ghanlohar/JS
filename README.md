@@ -106,6 +106,8 @@ Summary: manually updating or setting the constructor can lead to differrent and
 
 Promises
 ========================================
+The promise constructor takes one argument, a callback with two parameters, resolve and reject. Do something within the callback, perhaps async, then call resolve if everything worked, otherwise call reject.
+
 1. What happens when we return a nonpromise value in resolve or reject in JS promise?
 Ans: It will resolve this promise with the retruned non promise value. if we are not returning a value(automatically fn returns undefined) this will resolve(not reject) with undefined passed in next promise.
 
