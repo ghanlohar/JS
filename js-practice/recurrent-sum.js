@@ -1,7 +1,7 @@
 let sum = function () {
     let x = 0; 
     function inner() { 
-        x = x + arguments[0]; 
+        x = x + arguments[0];
         return arguments.callee;
     } 
     inner.toString = function () {
